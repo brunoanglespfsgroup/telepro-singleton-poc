@@ -3,14 +3,14 @@ Imports System.Threading
 Public Class CacheExample
  
     ' For SyncLock to mark a critical section
-    Private Shared ReadOnly _classLocker As New Object()
+    Private Shared ReadOnly ClassLocker As New Object()
  
     ' Allocate memory space to hold the 
     ' single object instance
     Private Shared _objSingleton As CacheExample
     
     ' It will hold cached data
-    Private _cachedData as CAchedData
+    Private _cachedData as CachedData
  
     ' Make the only constructor private 
     ' to prevent initialization outside of 
@@ -29,7 +29,7 @@ Public Class CacheExample
         If (_objSingleton Is Nothing) Then
             ' Mark a critical section where 
             ' threads take turns to execute
-            SyncLock (_classLocker)
+            SyncLock (ClassLocker)
                 If (_objSingleton Is Nothing) Then
                     _objSingleton = New CacheExample()
                 End If
