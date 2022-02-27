@@ -84,8 +84,8 @@ internal static class Program
 
         var cachedPlanets = cachedData.Planets;
         var cachedSatellites = cachedData.Satellites;
-        
-        
+
+        Console.WriteLine("[x] Printing cached data");
         foreach (var planet in cachedPlanets)
         {
             Console.WriteLine("- {0}", planet.Value);
