@@ -4,6 +4,7 @@ Module Program
     Sub Main(args As String())
         Console.WriteLine("LOADING DATA FROM DATABASE ....")
         
+        Console.WriteLine("[x] Loading planets ....")
         ' key -> planet id
         ' value -> planet name
         Dim planets as New Dictionary(Of Integer, String)

@@ -5,6 +5,7 @@ internal static class Program
     public static void Main()
     {
         Console.WriteLine("LOADING DATA FROM DATABASE ....");
+        Console.WriteLine("[x] Loading planets ....");
         // key -> planet id
         // value -> planet name
         var planets = new Dictionary<int, string>()
@@ -19,6 +20,7 @@ internal static class Program
             {8, "Neptune"}
         };
 
+        Console.WriteLine("[x] Loading satellites ....");
         // key -> planet id
         // value -> planet satellites (Dictionary)
         //          key -> satellite id
